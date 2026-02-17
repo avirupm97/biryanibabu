@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function PartyHero() {
   return (
     <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
@@ -11,11 +13,13 @@ export default function PartyHero() {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-3xl">
           {/* Hero Image */}
-          <div className="mb-8 lg:mb-12 rounded-2xl overflow-hidden shadow-2xl">
-            <img
+          <div className="mb-8 lg:mb-12 rounded-2xl overflow-hidden shadow-2xl relative h-[300px] md:h-[400px]">
+            <Image
               src="https://images.pexels.com/photos/32825907/pexels-photo-32825907.jpeg"
               alt="Aromatic biryani feast spread with kebabs - Karan Mridha on Pexels"
-              className="w-full h-[300px] md:h-[400px] object-cover"
+              fill
+              className="object-cover"
+              priority
             />
           </div>
 

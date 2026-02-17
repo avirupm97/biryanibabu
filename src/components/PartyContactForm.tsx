@@ -80,7 +80,7 @@ export default function PartyContactForm() {
             Plan Your Royal Celebration
           </CardTitle>
           <p className="text-light-tan text-sm text-center mt-2">
-            We'll get back to you in less than 6 hours
+            We&apos;ll get back to you in less than 6 hours
           </p>
         </CardHeader>
         <CardContent className="pt-6">
@@ -218,7 +218,7 @@ export default function PartyContactForm() {
             {/* Occasion */}
             <div>
               <label className="text-sm font-medium text-light-tan mb-2 block">
-                What's the occasion?
+                What&apos;s the occasion?
               </label>
               <Textarea
                 placeholder="Tell us about your celebration..."

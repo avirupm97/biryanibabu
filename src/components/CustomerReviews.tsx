@@ -56,7 +56,7 @@ export default function CustomerReviews() {
           <span className="accent-text text-sm tracking-[0.3em] uppercase mb-4 block">Testimonials</span>
           <h2 className="heading-xl mb-6">Ishq-e-Aawaam</h2>
           <div className="w-24 h-1 bg-royal-gold mx-auto mb-8" />
-          <p className="body-lg max-w-2xl mx-auto italic text-light-tan">The people's love and gratitude, in every bite. Our true reward is your satisfaction.</p>
+          <p className="body-lg max-w-2xl mx-auto italic text-light-tan">The people&apos;s love and gratitude, in every bite. Our true reward is your satisfaction.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -84,7 +84,7 @@ export default function CustomerReviews() {
                 <div className="flex flex-col gap-2 flex-1 min-w-0">
                   <h4 className="heading-md text-lg group-hover:text-royal-gold transition-colors">{review.name}</h4>
                   <p className="text-light-tan/90 text-sm leading-relaxed italic font-light">
-                    "{review.review}"
+                    &quot;{review.review}&quot;
                   </p>
                 </div>
               </Card>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const galleryImages = [
@@ -41,10 +42,12 @@ export default function PartyGallery() {
                 key={index}
                 className="relative aspect-square rounded-lg overflow-hidden shadow-lg group"
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-dark-brown/0 group-hover:bg-dark-brown/30 transition-colors duration-300" />

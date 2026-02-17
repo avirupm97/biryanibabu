@@ -3,19 +3,6 @@
 import { Smartphone } from "lucide-react";
 
 export default function Footer() {
-  const cities = [
-    "Mumbai",
-    "Delhi",
-    "Bangalore",
-    "Hyderabad",
-    "Chennai",
-    "Pune",
-    "Kolkata",
-    "Ahmedabad",
-    "Jaipur",
-    "Lucknow",
-  ];
-
   return (
     <footer className="bg-dark-glow border-t border-royal-gold/15 py-20">
       <div className="container mx-auto px-4">
