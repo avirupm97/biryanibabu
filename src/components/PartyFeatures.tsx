@@ -27,9 +27,9 @@ const features = [
 
 export default function PartyFeatures() {
   return (
-    <section className="py-16 md:py-20 bg-dark-glow">
+    <section className="pt-5 pb-0 h-[400px] bg-dark-glow">
       <div className="container mx-auto px-4">
-        <h2 className="heading-xl text-center mb-12 md:mb-16">
+        <h2 className="text-[32px] font-bold leading-tight text-royal-gold text-left mb-12 md:mb-16" style={{fontFamily: 'var(--font-heading)'}}>
           What Makes Every Celebration Special
         </h2>
 
@@ -42,11 +42,11 @@ export default function PartyFeatures() {
                 className="flex flex-col items-center text-center group"
               >
                 {/* Icon Circle */}
-                <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-royal-gold bg-dark-brown/50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Icon className="w-10 h-10 md:w-12 md:h-12 text-royal-gold" />
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-royal-gold bg-dark-brown/50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Icon className="w-6 h-6 md:w-8 md:h-8 text-royal-gold" />
                 </div>
                 {/* Label */}
-                <p className="text-light-tan text-sm md:text-base font-medium">
+                <p className="text-light-tan text-sm font-medium">
                   {feature.label}
                 </p>
               </div>

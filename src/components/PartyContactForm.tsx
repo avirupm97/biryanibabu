@@ -74,9 +74,9 @@ export default function PartyContactForm() {
 
   return (
     <div className="sticky top-24 max-h-[calc(100vh-120px)] overflow-y-auto">
-      <Card className="bg-warm-brown border-royal-gold/30 shadow-xl">
-        <CardHeader className="border-b border-royal-gold/20">
-          <CardTitle className="heading-md text-center">
+      <Card className="bg-warm-brown border-royal-gold/30 shadow-xl gap-0">
+        <CardHeader className="border-b border-royal-gold/20 gap-0 pb-3">
+          <CardTitle className="text-2xl font-semibold text-center text-foreground">
             Plan Your Royal Celebration
           </CardTitle>
           <p className="text-light-tan text-sm text-center mt-2">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -9,7 +10,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Our Story", href: "#story" },
+    { name: "Our Story", href: "/our-story" },
     { name: "Menu", href: "#menu" },
     { name: "Franchise", href: "#franchise" },
     { name: "Party Orders", href: "/party-orders" },
@@ -21,9 +22,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-3xl accent-text font-bold tracking-tighter hover:scale-105 transition-transform cursor-pointer">
-              Biryani Babu
-            </h1>
+            <Link href="/">
+              <h1 className="text-3xl accent-text font-bold tracking-tighter hover:scale-105 transition-transform cursor-pointer">
+                Biryani Babu
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

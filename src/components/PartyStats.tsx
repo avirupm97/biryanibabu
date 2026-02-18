@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const stats = [
   {
-    number: "4.5",
+    number: "4.5 Stars",
     label: "Rating",
     description: "Most loved app rating",
   },
@@ -22,7 +22,7 @@ const stats = [
 
 export default function PartyStats() {
   return (
-    <section className="py-16 md:py-20 bg-dark-glow">
+    <section className="py-16 md:py-10 bg-dark-glow">
       <div className="container mx-auto px-4">
         <h2 className="heading-xl text-center mb-12 md:mb-16">
           Loved by Millions
@@ -35,7 +35,7 @@ export default function PartyStats() {
               className="bg-warm-brown/50 border-royal-gold/30 hover:border-royal-gold/60 transition-all duration-300 hover:scale-105"
             >
               <CardContent className="pt-8 pb-8 text-center">
-                <div className="heading-2xl mb-2">{stat.number}</div>
+                <div className="stat-number mb-2">{stat.number}</div>
                 <div className="text-royal-gold font-semibold text-lg mb-2">
                   {stat.label}
                 </div>
