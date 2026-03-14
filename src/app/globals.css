@@ -12,6 +12,9 @@
   --color-dark-brown: var(--dark-brown);
   --color-warm-brown: var(--warm-brown);
   --color-light-tan: var(--light-tan);
+  --color-insp-primary: var(--insp-primary);
+  --color-insp-bg-dark: var(--insp-bg-dark);
+  --color-insp-regal-charcoal: var(--insp-regal-charcoal);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -90,6 +93,10 @@
   --sidebar-accent-foreground: #f5f5f5;
   --sidebar-border: #4a3830;
   --sidebar-ring: #d4af37;
+  /* Inspiration design tokens */
+  --insp-primary: #f2b90d;
+  --insp-bg-dark: #12110d;
+  --insp-regal-charcoal: #1c1a14;
 }
 
 @layer base {
@@ -192,6 +199,24 @@
 
 @utility animate-fade-in-delay-1 {
   animation: fadeIn 0.8s ease-in 0.2s both;
+}
+
+@utility insp-font-display {
+  font-family: var(--font-noto-serif), 'Noto Serif', serif;
+}
+
+@utility insp-font-sans {
+  font-family: var(--font-noto-sans), 'Noto Sans', sans-serif;
+}
+
+@layer components {
+  .gold-gradient-text {
+    background: linear-gradient(to right, #f2b90d, #ffd700, #b8860b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 }
 
 @layer base {

@@ -1,95 +1,60 @@
 "use client";
 
-import { Smartphone } from "lucide-react";
+import { Instagram, Twitter, Mail } from "lucide-react";
+
+const socialLinks = [
+  { icon: <Instagram className="w-4 h-4" />, href: "#", label: "Instagram" },
+  { icon: <Twitter className="w-4 h-4" />, href: "#", label: "Twitter" },
+  { icon: <Mail className="w-4 h-4" />, href: "#", label: "Email" },
+];
+
+const legalLinks = [
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of Service", href: "#" },
+  { label: "Sitemap", href: "#" },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-glow border-t border-royal-gold/15 py-20">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-          {/* Brand */}
-          <div className="flex flex-col items-center text-center">
-            <h3 className="text-3xl accent-text font-bold mb-6">
-              Biryani Babu
-            </h3>
-            <p className="text-light-tan/70 text-sm leading-relaxed italic max-w-xs">
-              Crafted from long lost royal recipes, once reserved for Royalty. A
-              legacy of taste, patience, and absolute perfection.
+    <footer className="bg-insp-bg-dark border-t border-white/5 py-16">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Top row */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/5 pb-12">
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl font-bold tracking-tighter text-white uppercase insp-font-sans">
+              Biryani <span className="text-insp-primary">Babu</span>
+            </h2>
+            <p className="text-stone-500 max-w-xs mt-2 insp-font-display italic">
+              Serving authenticity in every clay pot since 1924.
             </p>
           </div>
-
-          {/* Quick Links */}
-          <div className="flex flex-col items-center text-center">
-            <h4 className="heading-md text-lg mb-6 uppercase tracking-widest text-royal-gold">
-              Explore
-            </h4>
-            <ul className="space-y-4 text-light-tan/80 text-sm">
-              <li>
-                <a
-                  href="#story"
-                  className="hover:text-royal-gold transition-colors"
-                >
-                  Our Story
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#menu"
-                  className="hover:text-royal-gold transition-colors"
-                >
-                  Royal Menu
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#franchise"
-                  className="hover:text-royal-gold transition-colors"
-                >
-                  Franchise
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#party-orders"
-                  className="hover:text-royal-gold transition-colors"
-                >
-                  Party Orders
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div className="flex flex-col items-center text-center">
-            <h4 className="heading-md text-lg mb-6 uppercase tracking-widest text-royal-gold">
-              Contact Us
-            </h4>
-            <div className="flex items-center gap-3 text-light-tan/80 text-sm mb-4 group cursor-pointer">
-              <div className="w-8 h-8 rounded-full border border-royal-gold/30 flex items-center justify-center group-hover:border-royal-gold transition-colors">
-                <Smartphone className="w-4 h-4 text-royal-gold" />
-              </div>
-              <span className="group-hover:text-royal-gold transition-colors">
-                1800-123-4567
-              </span>
-            </div>
-            <p className="text-xs text-light-tan/50 mt-4 leading-relaxed max-w-xs">
-              Serving the royal flavors across 10 major cities in India.
-            </p>
+          <div className="flex gap-6">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                aria-label={link.label}
+                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-stone-400 hover:text-insp-primary hover:border-insp-primary transition-all"
+              >
+                {link.icon}
+              </a>
+            ))}
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-royal-gold/10 pt-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-light-tan/50 text-xs tracking-widest uppercase">
-            © 2026 Biryani Babu. Crafted with Royal Patience.
-          </p>
-          <div className="flex items-center gap-8">
-            <span className="text-royal-gold/50 text-[10px] tracking-[0.3em] uppercase">
-              Secure Payment
-            </span>
-            <span className="text-royal-gold/50 text-[10px] tracking-[0.3em] uppercase">
-              Authentic Taste
-            </span>
+        {/* Bottom row */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8 text-stone-600 text-xs uppercase tracking-[0.2em] insp-font-sans">
+          <p>© 2024 Biryani Babu Heritage Restaurants Pvt. Ltd.</p>
+          <div className="flex gap-6">
+            {legalLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="hover:text-insp-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

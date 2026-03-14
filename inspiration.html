@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Biryani Babu | Royalty in Every Grain</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#12110d",
+                        "regal-charcoal": "#1c1a14",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Noto Sans", sans-serif
+    }
+h1, h2, h3, h4, .font-display {
+    font-family: "Noto Serif", serif
+    }
+.mandala-bg {
+    background-image: radial-gradient(circle at center, rgba(242, 185, 13, 0.05) 0%, transparent 70%);
+    position: relative
+    }
+.mandala-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuABoeF4htjzoNijXlpuEzJ2fQPBqne6jey3_j7WO7Itj1awFV5X3Bn6DCSRd-pcOxncRSOAGdb0q8VG_teI2reunZAx_F4NTn4AINnx6hxJAHjPTD2-Kcbv6hdosNbOdrFKeCHWjeCdFIetMM0KNRzIy-4w8JEIz23vfeP66V1qdGWaDRSGHKUS6UuURIiZiFnSt-44hwmvYnkRFfY2nRdFUiuvLv6yqyTS-1qnOvbbQEfe_PTQRf0efAgLjJH8WPpkAqrg1hFOTOtt);
+    opacity: 0.2;
+    pointer-events: none
+    }
+.gold-gradient-text {
+    background: linear-gradient(to right, #f2b90d, #ffd700, #b8860b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+    }
+.nav-glass {
+    background: rgba(18, 17, 13, 0.8);
+    backdrop-filter: blur(12px)
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-stone-200 overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 border-b border-primary/20 nav-glass">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-3 group" href="#">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">temple_hindu</span>
+</div>
+<div>
+<h1 class="text-2xl font-bold tracking-tighter text-white uppercase">Biryani <span class="text-primary">Babu</span></h1>
+<p class="text-[10px] uppercase tracking-[0.3em] text-primary/70 -mt-1">Est. 1924</p>
+</div>
+</a>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#heritage">Heritage</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#craft">The Craft</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#menu">Menu</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#specials">Specialties</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 px-6 py-2 border border-primary/50 text-primary hover:bg-primary hover:text-background-dark transition-all rounded-lg font-bold text-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">event_seat</span>
+                    Book a Table
+                </button>
+<button class="flex items-center gap-2 px-6 py-2 bg-primary text-background-dark hover:bg-white transition-all rounded-lg font-bold text-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+                    Order Online
+                </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark/80 via-background-dark/40 to-background-dark z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A steaming copper handi filled with saffron-infused royal biryani" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt_o0JC5zdC9xj0yqxu1EdqcCxbQ5xKSW0mA8Ar58iER9bFIsjBgjoVAacS1MENQwQgSxsZZCMDIozn4eutTAfbA9yFlbXSBtHbcap0wx0LiPY6CIf275cnn8naUuz9ZJ0nC-QSr-TH4tIqAs_I2XV0_b_v_-NQzNTA7bBQ7YC-IusNz_E-q5s6ceuVPhlWRnhPIqCVmBr4ImrhOE_Plt5_cSE2ueNti1wOv564rVNMmyRabs8gcx-8ztbK8I5DJfqXlOlZzgKe1PR"/>
+</div>
+<div class="relative z-20 text-center max-w-4xl px-6">
+<div class="mb-6 flex justify-center">
+<span class="material-symbols-outlined text-primary text-6xl opacity-80">workspace_premium</span>
+</div>
+<h2 class="text-primary font-display italic text-2xl mb-2">The Legacy of Awadh</h2>
+<h1 class="text-5xl md:text-8xl font-display font-bold text-white mb-6 leading-tight">Royalty in Every <span class="gold-gradient-text">Grain</span></h1>
+<p class="text-lg md:text-xl text-stone-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light italic">
+                Discover the secret spice blends of 2000-year-old royal recipes, slow-cooked to perfection in traditional earthen handis over charcoal fires.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 py-4 bg-primary text-background-dark text-lg font-bold rounded-lg uppercase tracking-widest hover:scale-105 transition-transform">Explore the Menu</button>
+<button class="px-10 py-4 bg-white/10 backdrop-blur-md text-white text-lg font-bold rounded-lg border border-white/20 uppercase tracking-widest hover:bg-white/20 transition-all">Our Story</button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block">
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+</section>
+<!-- Our Heritage -->
+<section class="py-24 bg-regal-charcoal mandala-bg" id="heritage">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 border border-primary/30 rounded-xl group-hover:scale-105 transition-transform duration-500"></div>
+<img class="rounded-lg shadow-2xl relative z-10 w-full aspect-[4/5] object-cover filter sepia-[0.3]" data-alt="Ancient manuscripts and handpicked whole spices on a stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_vcuASHj4rW9sErWAdgLGNmggxIljqqTGA-pTALiHldhjIAZrbWLagUZ15rGeirRTZ_hK4V_Wq9jSLUtiTO3ZKIAAr4xDxXiWtdSn4EDwIbaMj6Dv5KRmCZTqLt18D5TUP2UpOY5r2qLcKTayxibbkYiHcWzDy7Lq1GaS2syAbYRlT0OzGI4h-dCopsLkgeGkTznDURXXWkMwPdz6l-7i67M9IwICIt_YbwOXetfXorvAs869cZIo1NZRSaaPSyHGbnEy8suZ_WRk"/>
+<div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-lg z-20 hidden md:block">
+<p class="text-background-dark font-display text-4xl font-bold italic">100+</p>
+<p class="text-background-dark text-xs uppercase font-bold tracking-tighter">Secret Spices</p>
+</div>
+</div>
+<div>
+<span class="text-primary uppercase tracking-[0.4em] font-bold text-sm block mb-4">The Chronicles</span>
+<h2 class="text-4xl md:text-5xl text-white font-bold mb-8 leading-tight">Preserving 2000 Years of <span class="text-primary italic">Flavor</span></h2>
+<p class="text-stone-400 text-lg leading-relaxed mb-8">
+                        Tracing back to the kitchens of ancient emperors, Biryani Babu preserves the sanctity of slow-cooking and authentic spice sourcing. Our Khansamas are the descendants of the royal cooks who once served the Mughal Empire.
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-5">
+<div class="w-12 h-12 rounded-full border border-primary/50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">history_edu</span>
+</div>
+<div>
+<h4 class="text-white text-xl font-bold mb-1">Ancient Manuscripts</h4>
+<p class="text-stone-400">Recipes recovered from royal court archives, translated from Persian and Sanskrit.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="w-12 h-12 rounded-full border border-primary/50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">skillet</span>
+</div>
+<div>
+<h4 class="text-white text-xl font-bold mb-1">Earthen Handi Tradition</h4>
+<p class="text-stone-400">We exclusively use porous clay pots from the Ganges riverbed for natural mineral infusion.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Craft Section -->
+<section class="py-24 bg-background-dark overflow-hidden" id="craft">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-primary font-display text-xl italic mb-2">The Ritual</h2>
+<h3 class="text-4xl md:text-6xl text-white font-bold tracking-tight">9 Hours of <span class="gold-gradient-text italic">Patience</span></h3>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="relative p-10 bg-regal-charcoal border border-white/5 rounded-2xl group hover:border-primary/40 transition-all">
+<div class="absolute top-6 right-6 text-6xl font-display text-white/5 italic">01</div>
+<span class="material-symbols-outlined text-primary text-5xl mb-6">outdoor_grill</span>
+<h4 class="text-2xl text-white font-bold mb-4">6-Hour Marination</h4>
+<p class="text-stone-400 leading-relaxed">Premium cuts of meat are tenderized with green papaya and soaked in a blend of 32 spices, Kashmiri saffron, and cold-pressed oils.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative p-10 bg-primary rounded-2xl group transition-all transform scale-105 shadow-2xl shadow-primary/20">
+<div class="absolute top-6 right-6 text-6xl font-display text-black/10 italic">02</div>
+<span class="material-symbols-outlined text-background-dark text-5xl mb-6">lock</span>
+<h4 class="text-2xl text-background-dark font-bold mb-4">The Dum Pukht</h4>
+<p class="text-background-dark/80 leading-relaxed font-medium">The handi is sealed with dough and slow-cooked over low flame for 3 hours, allowing the meat to cook in its own juices and steam.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative p-10 bg-regal-charcoal border border-white/5 rounded-2xl group hover:border-primary/40 transition-all">
+<div class="absolute top-6 right-6 text-6xl font-display text-white/5 italic">03</div>
+<span class="material-symbols-outlined text-primary text-5xl mb-6">restaurant</span>
+<h4 class="text-2xl text-white font-bold mb-4">Royal Serving</h4>
+<p class="text-stone-400 leading-relaxed">Served in regal brassware alongside our signature burhani raita and slow-roasted mirchi ka salan.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Regional Specialties Carousel -->
+<section class="py-24 bg-regal-charcoal" id="specials">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl text-white font-bold mb-2">Regional Specialties</h2>
+<p class="text-stone-400 italic">Exploring the diverse biryani landscapes of the Indian subcontinent</p>
+</div>
+<div class="flex gap-3">
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group relative overflow-hidden rounded-2xl bg-background-dark">
+<div class="aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Spicy Hyderabadi Dum Biryani with fried onions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG1BAcEzpBJbtNS8UQ2AWeWyLyfoLi2dMGF9Esb87mKu6Te7nO_r5-Da9X0NLYblCofFLIVE0lmDn1YC0NHor1fAMCPKnc2u13O5yk7BXUMg0nAY3tU52eLnf7b-LN3bIOEySO97gQXvFdOGtFzRBZRgC7gZIigDBjvlFG8Os_yZW20-YUi1cYhnP9GKE-xCb5e9m9oBqL3287moPRVbZa2wg0NSm0tG7BMeVV05TLbHUPWF9SBYTkZGWDTEciiUBZ-Qnryn24esL9"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="px-3 py-1 bg-primary text-background-dark text-[10px] font-bold uppercase tracking-widest rounded mb-3 inline-block">Iconic &amp; Spicy</span>
+<h4 class="text-2xl text-white font-bold mb-2">Hyderabadi Dum</h4>
+<p class="text-stone-400 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Intense, aromatic, and cooked with long-grain Basmati and tender goat meat.</p>
+<button class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2">
+                            Order Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative overflow-hidden rounded-2xl bg-background-dark">
+<div class="aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Aromatic Lucknowi biryani with light colors and whole spices" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAshw8OvqtrQRQJGITuNCBc8bOVuSc4p8xzqTYtg-6XYO3iscydmINIxRYSw7DB3JSBmCi-M6v3F-QwS-ie0cNzbxJRuUuboc3haXC3yuqKUHcKllCOqqRQhSFna1rZEw00oYvO5iHK0iDddN8D77DEFLikYxurg41WH1xmqh0098MZQzvWKLm2jiXYKDLbnEKXxxhJ8PbUsQ3As1hnn7T4pGZalj9CNZiQnxNpM3AXqwg2ZF4l42ukNMt8cdDaL0kSILAyo-JKA73U"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="px-3 py-1 bg-primary text-background-dark text-[10px] font-bold uppercase tracking-widest rounded mb-3 inline-block">Aromatic &amp; Royal</span>
+<h4 class="text-2xl text-white font-bold mb-2">Lucknowi (Awadhi)</h4>
+<p class="text-stone-400 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">A delicate blend of yakhni-style rice and meat that melts in your mouth.</p>
+<button class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2">
+                            Order Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative overflow-hidden rounded-2xl bg-background-dark">
+<div class="aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Kolkata style biryani featuring meat and a large boiled potato" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZFaIRJg69W8NqAdWzR4vWQKpE8usFJ8leIMFSdcptMnjodgLGmAHDyP5sLAeUWDy1jtvs06qF9G7zLT0DzKScHZNLRsQcrMqt2-LS5JWHKLP3cL2YRhdA9TjQJONlb3ansMZ4BSEgLtuSnx7JjGZqETDbWn9v7HpUYEJnn4sZ3u5DKv5k94FYYXRvwhBfcPsCxHeq1jLnWsV-nGt6oyHoLvCjxPhCJDwXkomLLaYnH5ZuHUYHkoGkRb0URjfy5WPH4YN-sA43BvLz"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="px-3 py-1 bg-primary text-background-dark text-[10px] font-bold uppercase tracking-widest rounded mb-3 inline-block">Subtle &amp; Unique</span>
+<h4 class="text-2xl text-white font-bold mb-2">The Kolkata Classic</h4>
+<p class="text-stone-400 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Known for its subtlety and the iconic inclusion of a soft, slow-cooked potato.</p>
+<button class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2">
+                            Order Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map & Location -->
+<section class="py-24 bg-background-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 bg-regal-charcoal rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+<div class="p-12 md:p-16">
+<h2 class="text-4xl text-white font-bold mb-8">Visit the Palace</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-sm mb-1">Our Flagship Outlet</h4>
+<p class="text-stone-400">7th Floor, Royal Heritage Plaza,<br/>Old City, Hyderabad - 500002</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-sm mb-1">Opening Hours</h4>
+<p class="text-stone-400">Mon - Sun: 11:30 AM - 11:00 PM</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-sm mb-1">Direct Line</h4>
+<p class="text-stone-400">+91 98765 43210</p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<button class="w-full py-4 border border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-background-dark transition-all uppercase tracking-widest">
+                            Get Directions
+                        </button>
+</div>
+</div>
+<div class="relative min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover grayscale" data-alt="A premium map of the city showing restaurant location" data-location="Hyderabad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8SolPQE7xDjMiWXRUpe6ppKKbMMWEpx6-Gvt40N8KrHilnVW8zGjNHlRX5y2qiS9wWmnW5jcmHA5KewWOVv7QovUn_rnQ6-GVp40QLyiQXJAXg0qdJwxqZeTzmJrPCTWuJTtxpKi83efGdFSRgj83YYdUCFNOMV6oTcKgAOoHenpbfr-T9fVtJrQGf8f63pyeKF7taEvad0iGhvZ0HfpIcCTZla__dVT0moKmiu-835OPiWT0ovLFMDntUBqA0S-ajg_6whaZCStn"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark border-t border-white/5 py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/5 pb-12">
+<div class="text-center md:text-left">
+<h2 class="text-3xl font-bold tracking-tighter text-white uppercase">Biryani <span class="text-primary">Babu</span></h2>
+<p class="text-stone-500 max-w-xs mt-2 font-display italic">Serving authenticity in every clay pot since 1924.</p>
+</div>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-stone-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-stone-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-stone-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 mt-8 text-stone-600 text-xs uppercase tracking-[0.2em]">
+<p>© 2024 Biryani Babu Heritage Restaurants Pvt. Ltd.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating Widget -->
+<div class="fixed bottom-8 right-8 z-40">
+<button class="bg-primary text-background-dark w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform group">
+<span class="material-symbols-outlined text-3xl">restaurant_menu</span>
+<span class="absolute right-20 bg-background-dark text-white px-4 py-2 rounded-lg text-sm font-bold border border-primary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none uppercase tracking-widest">Reserve a Table</span>
+</button>
+</div>
+</body></html>

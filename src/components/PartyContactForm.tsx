@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -28,10 +27,9 @@ export default function PartyContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Basic validation
+
     const newErrors: Record<string, string> = {};
-    
+
     if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.phone.trim()) newErrors.phone = "Contact number is required";
     if (!formData.city.trim()) newErrors.city = "City is required";
@@ -45,9 +43,7 @@ export default function PartyContactForm() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // Form is valid - show success message
       alert("Thank you! We'll get back to you in less than 6 hours.");
-      // Reset form
       setFormData({
         name: "",
         phone: "",
@@ -62,7 +58,6 @@ export default function PartyContactForm() {
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-    // Clear error when user starts typing
     if (errors[field]) {
       setErrors((prev) => {
         const newErrors = { ...prev };
@@ -74,20 +69,24 @@ export default function PartyContactForm() {
 
   return (
     <div className="sticky top-24 max-h-[calc(100vh-120px)] overflow-y-auto">
-      <Card className="bg-warm-brown border-royal-gold/30 shadow-xl gap-0">
-        <CardHeader className="border-b border-royal-gold/20 gap-0 pb-3">
-          <CardTitle className="text-2xl font-semibold text-center text-foreground">
-            Plan Your Royal Celebration
-          </CardTitle>
-          <p className="text-light-tan text-sm text-center mt-2">
+      <div className="bg-insp-regal-charcoal border border-white/5 rounded-2xl shadow-2xl overflow-hidden">
+        {/* Header */}
+        <div className="border-b border-white/5 px-8 py-6 text-center">
+          <h2 className="text-2xl font-bold text-white insp-font-display">
+            Plan Your{" "}
+            <span className="text-insp-primary italic">Royal Celebration</span>
+          </h2>
+          <p className="text-stone-400 text-sm mt-2 insp-font-sans">
             We&apos;ll get back to you in less than 6 hours
           </p>
-        </CardHeader>
-        <CardContent className="pt-6">
+        </div>
+
+        {/* Form */}
+        <div className="px-8 py-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Name */}
             <div>
-              <label className="text-sm font-medium text-light-tan mb-2 block">
+              <label className="text-sm font-medium text-stone-400 mb-2 block insp-font-sans">
                 Name *
               </label>
               <Input
@@ -95,19 +94,19 @@ export default function PartyContactForm() {
                 placeholder="Your name"
                 value={formData.name}
                 onChange={(e) => handleChange("name", e.target.value)}
-                className={`bg-dark-brown/50 border-border text-foreground ${
-                  errors.name ? "border-destructive" : ""
+                className={`bg-insp-bg-dark border-white/10 text-white placeholder:text-stone-600 focus:border-insp-primary/50 ${
+                  errors.name ? "border-red-500" : ""
                 }`}
               />
               {errors.name && (
-                <p className="text-destructive text-xs mt-1">{errors.name}</p>
+                <p className="text-red-400 text-xs mt-1 insp-font-sans">{errors.name}</p>
               )}
             </div>
 
             {/* Phone and City */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-medium text-light-tan mb-2 block">
+                <label className="text-sm font-medium text-stone-400 mb-2 block insp-font-sans">
                   Contact Number *
                 </label>
                 <Input
@@ -115,16 +114,16 @@ export default function PartyContactForm() {
                   placeholder="Phone"
                   value={formData.phone}
                   onChange={(e) => handleChange("phone", e.target.value)}
-                  className={`bg-dark-brown/50 border-border text-foreground ${
-                    errors.phone ? "border-destructive" : ""
+                  className={`bg-insp-bg-dark border-white/10 text-white placeholder:text-stone-600 focus:border-insp-primary/50 ${
+                    errors.phone ? "border-red-500" : ""
                   }`}
                 />
                 {errors.phone && (
-                  <p className="text-destructive text-xs mt-1">{errors.phone}</p>
+                  <p className="text-red-400 text-xs mt-1 insp-font-sans">{errors.phone}</p>
                 )}
               </div>
               <div>
-                <label className="text-sm font-medium text-light-tan mb-2 block">
+                <label className="text-sm font-medium text-stone-400 mb-2 block insp-font-sans">
                   City *
                 </label>
                 <Input
@@ -132,12 +131,12 @@ export default function PartyContactForm() {
                   placeholder="City"
                   value={formData.city}
                   onChange={(e) => handleChange("city", e.target.value)}
-                  className={`bg-dark-brown/50 border-border text-foreground ${
-                    errors.city ? "border-destructive" : ""
+                  className={`bg-insp-bg-dark border-white/10 text-white placeholder:text-stone-600 focus:border-insp-primary/50 ${
+                    errors.city ? "border-red-500" : ""
                   }`}
                 />
                 {errors.city && (
-                  <p className="text-destructive text-xs mt-1">{errors.city}</p>
+                  <p className="text-red-400 text-xs mt-1 insp-font-sans">{errors.city}</p>
                 )}
               </div>
             </div>
@@ -145,23 +144,23 @@ export default function PartyContactForm() {
             {/* Date and Guests */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-medium text-light-tan mb-2 block">
+                <label className="text-sm font-medium text-stone-400 mb-2 block insp-font-sans">
                   Date *
                 </label>
                 <Input
                   type="date"
                   value={formData.date}
                   onChange={(e) => handleChange("date", e.target.value)}
-                  className={`bg-dark-brown/50 border-border text-foreground ${
-                    errors.date ? "border-destructive" : ""
+                  className={`bg-insp-bg-dark border-white/10 text-white focus:border-insp-primary/50 ${
+                    errors.date ? "border-red-500" : ""
                   }`}
                 />
                 {errors.date && (
-                  <p className="text-destructive text-xs mt-1">{errors.date}</p>
+                  <p className="text-red-400 text-xs mt-1 insp-font-sans">{errors.date}</p>
                 )}
               </div>
               <div>
-                <label className="text-sm font-medium text-light-tan mb-2 block">
+                <label className="text-sm font-medium text-stone-400 mb-2 block insp-font-sans">
                   Number of Guests *
                 </label>
                 <Select
@@ -169,36 +168,36 @@ export default function PartyContactForm() {
                   onValueChange={(value) => handleChange("guests", value)}
                 >
                   <SelectTrigger
-                    className={`bg-dark-brown/50 border-border text-foreground ${
-                      errors.guests ? "border-destructive" : ""
+                    className={`bg-insp-bg-dark border-white/10 text-white focus:border-insp-primary/50 ${
+                      errors.guests ? "border-red-500" : ""
                     }`}
                   >
                     <SelectValue placeholder="Select" />
                   </SelectTrigger>
-                  <SelectContent className="bg-warm-brown border-royal-gold/30">
-                    <SelectItem value="less-than-15" className="text-foreground">
+                  <SelectContent className="bg-insp-regal-charcoal border-white/10">
+                    <SelectItem value="less-than-15" className="text-stone-300 focus:bg-insp-bg-dark focus:text-white">
                       Less than 15
                     </SelectItem>
-                    <SelectItem value="15-25" className="text-foreground">
+                    <SelectItem value="15-25" className="text-stone-300 focus:bg-insp-bg-dark focus:text-white">
                       15-25
                     </SelectItem>
-                    <SelectItem value="25-50" className="text-foreground">
+                    <SelectItem value="25-50" className="text-stone-300 focus:bg-insp-bg-dark focus:text-white">
                       25-50
                     </SelectItem>
-                    <SelectItem value="50+" className="text-foreground">
+                    <SelectItem value="50+" className="text-stone-300 focus:bg-insp-bg-dark focus:text-white">
                       50+
                     </SelectItem>
                   </SelectContent>
                 </Select>
                 {errors.guests && (
-                  <p className="text-destructive text-xs mt-1">{errors.guests}</p>
+                  <p className="text-red-400 text-xs mt-1 insp-font-sans">{errors.guests}</p>
                 )}
               </div>
             </div>
 
             {/* Email */}
             <div>
-              <label className="text-sm font-medium text-light-tan mb-2 block">
+              <label className="text-sm font-medium text-stone-400 mb-2 block insp-font-sans">
                 Email Address *
               </label>
               <Input
@@ -206,38 +205,38 @@ export default function PartyContactForm() {
                 placeholder="your.email@example.com"
                 value={formData.email}
                 onChange={(e) => handleChange("email", e.target.value)}
-                className={`bg-dark-brown/50 border-border text-foreground ${
-                  errors.email ? "border-destructive" : ""
+                className={`bg-insp-bg-dark border-white/10 text-white placeholder:text-stone-600 focus:border-insp-primary/50 ${
+                  errors.email ? "border-red-500" : ""
                 }`}
               />
               {errors.email && (
-                <p className="text-destructive text-xs mt-1">{errors.email}</p>
+                <p className="text-red-400 text-xs mt-1 insp-font-sans">{errors.email}</p>
               )}
             </div>
 
             {/* Occasion */}
             <div>
-              <label className="text-sm font-medium text-light-tan mb-2 block">
+              <label className="text-sm font-medium text-stone-400 mb-2 block insp-font-sans">
                 What&apos;s the occasion?
               </label>
               <Textarea
                 placeholder="Tell us about your celebration..."
                 value={formData.occasion}
                 onChange={(e) => handleChange("occasion", e.target.value)}
-                className="bg-dark-brown/50 border-border text-foreground min-h-[80px]"
+                className="bg-insp-bg-dark border-white/10 text-white placeholder:text-stone-600 focus:border-insp-primary/50 min-h-[80px]"
               />
             </div>
 
             {/* Submit Button */}
             <Button
               type="submit"
-              className="w-full bg-royal-gold hover:bg-royal-gold/90 text-dark-brown font-semibold h-11"
+              className="w-full bg-insp-primary hover:bg-insp-primary/90 text-insp-bg-dark font-bold h-11 uppercase tracking-widest insp-font-sans hover:scale-[1.02] transition-transform"
             >
               Submit
             </Button>
           </form>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 }

@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function PartyOrdersPage() {
   return (
-    <main className="min-h-screen bg-dark-glow selection:bg-royal-gold selection:text-dark-brown">
+    <main className="min-h-screen bg-insp-bg-dark selection:bg-insp-primary selection:text-insp-bg-dark">
       <Header />
       
       {/* Add top padding to account for fixed header */}

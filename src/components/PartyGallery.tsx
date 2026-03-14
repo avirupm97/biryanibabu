@@ -32,46 +32,48 @@ const galleryImages = [
 
 export default function PartyGallery() {
   return (
-    <section className="py-16 md:py-[67px] bg-gradient-to-b from-warm-brown/30 to-dark-brown/30">
-      <div className="container mx-auto px-4">
+    <section
+      className="py-16 md:py-20 bg-insp-regal-charcoal relative overflow-hidden"
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at center, rgba(242, 185, 13, 0.04) 0%, transparent 70%)",
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Content */}
           <div className="text-center lg:text-left">
-            <div className="flex items-start gap-6 mb-6 w-[500px]">
-              <h2 className="text-[32px] font-bold leading-tight text-royal-gold w-[500px]" style={{fontFamily: 'var(--font-heading)'}}>
-                Every Celebration Deserves Royal Treatment
-              </h2>
-              
-              {/* Image Grid beside heading */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                {galleryImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className="relative aspect-square rounded-lg overflow-hidden shadow-lg group"
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    />
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-dark-brown/0 group-hover:bg-dark-brown/30 transition-colors duration-300" />
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <p className="body-lg mb-8 max-w-xl">
-              Each dish is crafted to perfection with royal biryanis in different serving portions, paired with succulent kebabs, curries, and desserts.
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white mb-6 insp-font-display">
+              Every Celebration Deserves{" "}
+              <span className="text-insp-primary italic">Royal Treatment</span>
+            </h2>
+
+            <p className="text-stone-400 text-lg leading-relaxed mb-8 insp-font-sans">
+              Each dish is crafted to perfection with royal biryanis in
+              different serving portions, paired with succulent kebabs, curries,
+              and desserts.
             </p>
-            <Button className="bg-royal-gold hover:bg-royal-gold/90 text-dark-brown font-semibold px-8">
+            <Button className="px-8 py-3 h-auto bg-insp-primary text-insp-bg-dark font-bold rounded-lg uppercase tracking-widest hover:scale-105 hover:bg-insp-primary transition-transform insp-font-sans">
               Contact Us
             </Button>
           </div>
-          
-          <div></div>
+
+          {/* Image Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="relative aspect-square rounded-lg overflow-hidden shadow-lg group border border-white/5"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-insp-bg-dark/0 group-hover:bg-insp-bg-dark/30 transition-colors duration-300" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
